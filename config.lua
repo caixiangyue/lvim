@@ -66,6 +66,27 @@ lvim.builtin.terminal.open_mapping = "<c-t>"
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+-- lvim.builtin.alpha.mode = "startify"
+local dashboard = require "alpha.themes.dashboard"
+table.insert(lvim.builtin.alpha.dashboard.section.buttons.val, dashboard.button("q", "  Quit NVIM", ":qa<CR>"))
+local banner = {
+"██████ ██   ██ ██    ██ ",
+"██       ██ ██   ██  ██  ",
+"██        ███     ████   ",
+"██       ██ ██     ██    ",
+" ██████ ██   ██    ██ ",
+}
+local banner1 = {
+" ██████╗██╗  ██╗██╗   ██╗",
+"██╔════╝╚██╗██╔╝╚██╗ ██╔╝",
+"██║      ╚███╔╝  ╚████╔╝ ",
+"██║      ██╔██╗   ╚██╔╝  ",
+"╚██████╗██╔╝ ██╗   ██║   ",
+" ╚═════╝╚═╝  ╚═╝   ╚═╝",
+}
+lvim.builtin.alpha.dashboard.section.header.val = banner1
+lvim.builtin.alpha.dashboard.section.footer.val = {"https://github.com/caixiangyue"}
+
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
