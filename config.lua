@@ -110,13 +110,16 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "erlang",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.treesitter.rainbow.enable = true
 
 lvim.plugins = {
-  {"dstein64/vim-startuptime"},
+    {"dstein64/vim-startuptime"},
+    {"mrjones2014/nvim-ts-rainbow"},
 }
 
 -- generic LSP settings
