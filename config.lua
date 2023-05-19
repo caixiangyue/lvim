@@ -72,8 +72,6 @@ lvim.builtin.terminal.open_mapping = "<c-t>"
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 -- lvim.builtin.alpha.mode = "startify"
-local dashboard = require "alpha.themes.dashboard"
-table.insert(lvim.builtin.alpha.dashboard.section.buttons.val, dashboard.button("q", "  Quit NVIM", ":qa<CR>"))
 local banner = {
 "██████ ██   ██ ██    ██ ",
 "██       ██ ██   ██  ██  ",
@@ -110,7 +108,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
-  "erlang",
+  "erlang"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -119,7 +117,8 @@ lvim.builtin.treesitter.rainbow.enable = true
 
 lvim.plugins = {
     {"dstein64/vim-startuptime"},
-    {"mrjones2014/nvim-ts-rainbow"},
+    -- {"mrjones2014/nvim-ts-rainbow"},
+    {"HiPhish/nvim-ts-rainbow2"},
 }
 
 -- generic LSP settings
